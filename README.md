@@ -4,14 +4,10 @@ as well as some additional functions.
 
 those functions are :
 
-• isalpha
-• isdigit
-• isalnum
-• isascii
-• isprint
-• strlen
-• memset
-• bzero
+• isalpha                  • isdigit
+• isalnum                  • isascii
+• isprint                  • strlen
+• memset                   • bzero
 • memcpy
 • memmove
 • strlcpy
