@@ -8,10 +8,10 @@ char *ft_strrchr(const char *s, int c)
     while (*s)
         s++;
     if(c == *s)
-        return (s);
+        return ((char *)s);
     while(--len >= 0 && *s != c)
         s--;
     if (len >= 0)
-        return (s);
+        return ((char *)s);
     return (NULL);
 }

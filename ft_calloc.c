@@ -26,22 +26,22 @@ Memory Block:
   +------------------- Element 0 (int)
 */
 
-#include <stdio.h>
-int main() {
-    int *arr;
-    size_t num_elements = 5;
-    size_t element_size = sizeof(int);
+// #include <stdio.h>
+// int main() {
+//     int *arr;
+//     size_t num_elements = 5;
+//     size_t element_size = sizeof(int);
 
-    // Use my_calloc to allocate memory for an array of 5 integers
-    arr = (int *)ft_calloc(num_elements, element_size);
+//     // Use my_calloc to allocate memory for an array of 5 integers
+//     arr = (int *)ft_calloc(num_elements, element_size);
 
-    // Print the array
-    for (size_t i = 0; i < num_elements; i++) {
-        printf("arr[%zu] = %d\n", i, arr[i]);
-    }
+//     // Print the array
+//     for (size_t i = 0; i < num_elements; i++) {
+//         printf("arr[%zu] = %d\n", i, arr[i]);
+//     }
 
-    // Free the allocated memory when done
-    free(arr);
+//     // Free the allocated memory when done
+//     free(arr);
 
-    return 0;
-}
+//     return 0;
+// }

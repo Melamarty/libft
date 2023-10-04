@@ -7,6 +7,6 @@ char *ft_strchr(const char *s, int c)
         s++;
     }
     if (c == *s)
-        return (s);
+        return ((char *)s);
     return (NULL);
 }

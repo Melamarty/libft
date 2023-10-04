@@ -16,7 +16,6 @@ static int inclu(const char *s, char c)
 static size_t leng(const char *s1, const char *s2)
 {
     size_t i;
-    size_t len;
     size_t j;
 
     i = 0;
@@ -31,9 +30,9 @@ static size_t leng(const char *s1, const char *s2)
 char *ft_strtrim(const char *s1, const char *s2)
 {
     char *str;
-    size_t len;
     size_t i;
     size_t j;
+    size_t len;
 
     len = leng(s1, s2);
     str = (char *)malloc(len);
@@ -53,9 +52,9 @@ char *ft_strtrim(const char *s1, const char *s2)
     return (str);
 }
 
-#include <stdio.h>
-int main ()
-{
-    char *s = ft_strtrim("ababaaaMy name is Simonbbaaabbab", "ab");
-    printf("==> %s\n", s);
-}
+// #include <stdio.h>
+// int main ()
+// {
+//     char *s = ft_strtrim("ababaaaMy name is Simonbbaaabbab", "ab");
+//     printf("==> %s\n", s);
+// }

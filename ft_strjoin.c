@@ -12,9 +12,9 @@ char *ft_strjoin(const char *s1, const char *s2)
     while (s1[i] || s2[i])
     {
         if(s1[i])
-            str = s1[i];
+            str[i] = s1[i];
         else
-            str = s2[i];
+            str[i] = s2[i];
         i++;
     }
     str[i] = '\0';

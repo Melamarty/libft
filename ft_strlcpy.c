@@ -19,12 +19,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
     return (len);
 }
 
-int main()
-{
-    char p[20];
-    char *dest = p;
-    char *src = "hello";
+// int main()
+// {
+//     char p[20];
+//     char *dest = p;
+//     char *src = "hello";
 
-    ft_strlcpy(dest, src, 3);
-    printf("%s\n", p);
-}
+//     ft_strlcpy(dest, src, 3);
+//     printf("%s\n", p);
+// }

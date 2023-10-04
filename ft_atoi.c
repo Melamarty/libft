@@ -32,20 +32,20 @@ int    ft_atoi(const char *str)
     return res;
 }
 
-int main ()
-{
-    printf("atoi result -----> %d\n", atoi("42"));
-    printf("ft_atoi result -----> %d\n", atoi("42"));
-    printf("-----------------------------\n");
-    printf("atoi result -----> %d\n", atoi("     456"));
-    printf("ft_atoi result -----> %d\n", atoi("   456"));
-    printf("-----------------------------\n");
-    printf("atoi result -----> %d\n", atoi("  -1234"));
-    printf("ft_atoi result -----> %d\n", atoi("  -1234"));
-    printf("-----------------------------\n");
-    printf("atoi result -----> %d\n", atoi("   ++1234"));
-    printf("ft_atoi result -----> %d\n", atoi("    ++1234"));
-    printf("-----------------------------\n");
-    printf("atoi result -----> %d\n", atoi("   123qz123"));
-    printf("ft_atoi result -----> %d\n", atoi("   123ab123"));
-}
+// int main ()
+// {
+//     printf("atoi result -----> %d\n", atoi("42"));
+//     printf("ft_atoi result -----> %d\n", atoi("42"));
+//     printf("-----------------------------\n");
+//     printf("atoi result -----> %d\n", atoi("     456"));
+//     printf("ft_atoi result -----> %d\n", atoi("   456"));
+//     printf("-----------------------------\n");
+//     printf("atoi result -----> %d\n", atoi("  -1234"));
+//     printf("ft_atoi result -----> %d\n", atoi("  -1234"));
+//     printf("-----------------------------\n");
+//     printf("atoi result -----> %d\n", atoi("   ++1234"));
+//     printf("ft_atoi result -----> %d\n", atoi("    ++1234"));
+//     printf("-----------------------------\n");
+//     printf("atoi result -----> %d\n", atoi("   123qz123"));
+//     printf("ft_atoi result -----> %d\n", atoi("   123ab123"));
+// }

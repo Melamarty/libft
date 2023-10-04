@@ -66,16 +66,16 @@ char **ft_split(const char *s, char c)
     return (spl);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    char s[] = "hello world i love you";
-    char **sp = ft_split(s, ' ');
-    int i = 0;
-    while (sp[i])
-    {
-        printf("==== %s ====\n", sp[i]);
-        i++;
-    }
-}
+// int main()
+// {
+//     char s[] = "hello world i love you";
+//     char **sp = ft_split(s, ' ');
+//     int i = 0;
+//     while (sp[i])
+//     {
+//         printf("==== %s ====\n", sp[i]);
+//         i++;
+//     }
+// }
