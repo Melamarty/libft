@@ -1,0 +1,8 @@
+Test 1: Char found (custom): World!
+Test 1: Char found (standard): World!
+Test 2: Char not found (custom): NULL
+Test 2: Char not found (standard): NULL
+Test 3: Char at beginning (custom): Hello, World!
+Test 3: Char at beginning (standard): Hello, World!
+Test 4: Char at end (custom): !
+Test 4: Char at end (standard): !
