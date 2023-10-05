@@ -5,6 +5,8 @@ int get_len(int n)
     int long nb;
     int len;
 
+    if(n == 0)
+        return (1);
     nb = n;
     if(nb < 0)
         nb = -nb;
@@ -14,7 +16,9 @@ int get_len(int n)
         nb /= 10;
         len++;
     }
-    return len;
+    if(n > 0)
+        return (len);
+    return (len + 1);
 }
 
 char *ft_itoa(int n)
@@ -23,10 +27,7 @@ char *ft_itoa(int n)
     char *s;
     int long nb;
 
-    if(n > 0)
-        len = get_len(n);
-    else
-        len = get_len(n) + 1;
+    len = get_len(n);
     s = (char *)malloc(len + 1);
     if (!s)
         return (NULL);
@@ -37,6 +38,8 @@ char *ft_itoa(int n)
         nb = -nb;
     }
     s[--len] = '\0';
+    if(nb == 0)
+        s[0] = '0';
     while (nb > 0)
     {
         s[len--] = nb % 10 + '0';
@@ -45,9 +48,15 @@ char *ft_itoa(int n)
     return (s);
 }
 
-// #include <stdio.h>
-// int main()
-// {
-//     char *s = ft_itoa(-2147483648);
-//     printf("=== > %s\n",s);
-// }
+#include <stdio.h>
+int main()
+{
+    printf("=== > %s\n",ft_itoa(-2147483648));
+    printf("=====================\n");
+    printf("=== > %s\n",ft_itoa(0));
+    printf("=====================\n");
+    printf("=== > %s\n",ft_itoa(2147483647));
+    printf("=====================\n");
+    printf("=== > %s\n",ft_itoa(42));
+    printf("=====================\n");
+}

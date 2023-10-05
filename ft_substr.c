@@ -10,9 +10,9 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     slen = 0;
     while (s[slen])
         slen++;
-    if(start >= slen)
-        return (malloc(1));
     sub = (char *)malloc(len + 1);
+    if(start >= slen)
+        return (ft_strdup(""));
     if(sub == NULL || s == NULL)
         return (NULL);
     i = 0;

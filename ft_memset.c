@@ -10,7 +10,7 @@ void	*ft_memset(void *buff, int value, size_t size)
     while (i < size)
     {
         *ptr = byte_value;
-        buff++;
+        ptr++;
         i++;
     }
     return (buff);

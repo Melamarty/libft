@@ -3,7 +3,9 @@
 static int	ft_strncmpc(unsigned char *str1,unsigned char *str2, int n)
 {
 	int i;
-	while (str1[i] && str2[i] && i < n)
+
+    i = 0;
+	while (str1[i] && str2[i] && str1[i] == str2[i] && i < n)
 		i++;
 	return (str1[i] - str2[i]);
 }

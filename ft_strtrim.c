@@ -34,6 +34,8 @@ char *ft_strtrim(const char *s1, const char *s2)
     size_t j;
     size_t len;
 
+    if(s1 == NULL || s2 == NULL)
+        return (NULL);
     len = leng(s1, s2);
     str = (char *)malloc(len);
     if(!str)
