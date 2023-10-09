@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int get_len(int n)
+static int get_len(int n)
 {
     int long nb;
     int len;
@@ -37,26 +37,13 @@ char *ft_itoa(int n)
         s[0] = '-';
         nb = -nb;
     }
-    s[--len] = '\0';
+    s[len] = '\0';
     if(nb == 0)
         s[0] = '0';
     while (nb > 0)
     {
-        s[len--] = nb % 10 + '0';
+        s[--len] = nb % 10 + '0';
         nb /= 10;
     }
     return (s);
-}
-
-#include <stdio.h>
-int main()
-{
-    printf("=== > %s\n",ft_itoa(-2147483648));
-    printf("=====================\n");
-    printf("=== > %s\n",ft_itoa(0));
-    printf("=====================\n");
-    printf("=== > %s\n",ft_itoa(2147483647));
-    printf("=====================\n");
-    printf("=== > %s\n",ft_itoa(42));
-    printf("=====================\n");
 }

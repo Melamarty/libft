@@ -33,28 +33,3 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     return dst;
 }
-
-// int main() {
-//     char dest[20];
-//     char src[] = "This is a test.";
-
-//     // Case 1: No overlap
-//     ft_memmove(dest, src, 15);
-//     printf("Case 1 (No Overlap)\n");
-//     printf("src: %s\n", src);
-//     printf("dest: %s\n\n", dest);
-
-//     // Case 2: Overlap from left to right
-//     ft_memmove(dest + 8, dest, 10);
-//     printf("Case 2 (Left Overlap)\n");
-//     printf("src: %s\n", src);
-//     printf("dest: %s\n\n", dest);
-
-//     // Case 3: Overlap from right to left
-//     ft_memmove(dest, dest + 5, 10);
-//     printf("Case 3 (Right Overlap)\n");
-//     printf("src: %s\n", src);
-//     printf("dest: %s\n\n", dest);
-
-//     return 0;
-// }

@@ -6,14 +6,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     size_t i;
     unsigned int slen;
 
-    
-    slen = 0;
-    while (s[slen])
-        slen++;
-    sub = (char *)malloc(len + 1);
-    if(start >= slen)
+    if(!s)
         return (ft_strdup(""));
-    if(sub == NULL || s == NULL)
+    slen = ft_strlen(s);
+    if(start >= slen || len == 0)
+        return (ft_strdup(""));
+    sub = (char *)malloc(len + 1); 
+    if(!sub)
         return (NULL);
     i = 0;
     while(len > 0 && s[start])
@@ -26,10 +25,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     sub[i] = '\0';
     return (sub);
 }
-
-// #include <stdio.h>
-// int main ()
-// {
-//     char *sub = ft_substr("Bonjour comment ca va?", 5, 100);
-//     printf("==> %s\n", sub);
-// }

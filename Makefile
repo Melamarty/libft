@@ -6,10 +6,14 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_strnstr.c ft_atoi.c ft_strrchr.c ft_strjoin.c \
 	   ft_substr.c ft_itoa.c ft_strtrim.c ft_strmapi.c \
 	   ft_striteri.c ft_split.c ft_putchar_fd.c \
-	   ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
+	   ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c\
+	   ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c
+	   
 B_SRCS =  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		  ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-		  ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		  ft_lstclear.c  ft_lstmap.c
 
 NAME = libft.a
 LIBC = ar -rcs
@@ -24,9 +28,10 @@ RM = rm -f
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
-	rm -f *.o
 bonus: ${B_OBJS}
 	${LIBC} ${NAME} ${B_OBJS}
+so: ${OBJS}
+	${CC} -shared -o libft.so ${OBJS}
 	rm -f *.o
 
 all: ${NAME}
@@ -34,7 +39,7 @@ all: ${NAME}
 clean:
 	${RM} ${OBJS}
 
-fclean: clean
+# fclean: clean
 	${RM} ${NAME} ${so}
 
 re: fclean all

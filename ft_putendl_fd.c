@@ -5,6 +5,8 @@ void ft_putendl_fd(char *s, int fd)
 {
     size_t i;
 
+    if(!s)
+        return;
     i = 0;
     while (s[i])
     {
@@ -13,10 +15,3 @@ void ft_putendl_fd(char *s, int fd)
     }
     write(fd, "\n", 1);
 }
-
-// int main()
-// {
-//     char *file = "file.txt";
-//     int fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0644);
-//     ft_putendl_fd("hello i love programming", fd);
-// }

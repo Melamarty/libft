@@ -23,10 +23,3 @@ void ft_putnbr_fd(int n, int fd)
         write(fd, &c, 1);
     }  
 }
-
-// int main()
-// {
-//     char *file = "file.txt";
-//     int fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0644);
-//     ft_putnbr_fd(42, fd);
-// }

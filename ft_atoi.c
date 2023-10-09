@@ -17,10 +17,10 @@ int    ft_atoi(const char *str)
     while (ft_isspace(str[i]))
         i++;
     s = 1;
-    if(str[i] == '-' || str[i] == '+')
+    if(str[i] && (str[i] == '-' || str[i] == '+'))
     {
         if(str[i] == '-')
-            s = -s;
+            s = -1;
         i++;
     }
     res = 0;
@@ -29,23 +29,5 @@ int    ft_atoi(const char *str)
         res = res * 10 + (str[i] - '0');
         i++;
     }
-    return res;
+    return (res * s);
 }
-
-// int main ()
-// {
-//     printf("atoi result -----> %d\n", atoi("42"));
-//     printf("ft_atoi result -----> %d\n", atoi("42"));
-//     printf("-----------------------------\n");
-//     printf("atoi result -----> %d\n", atoi("     456"));
-//     printf("ft_atoi result -----> %d\n", atoi("   456"));
-//     printf("-----------------------------\n");
-//     printf("atoi result -----> %d\n", atoi("  -1234"));
-//     printf("ft_atoi result -----> %d\n", atoi("  -1234"));
-//     printf("-----------------------------\n");
-//     printf("atoi result -----> %d\n", atoi("   ++1234"));
-//     printf("ft_atoi result -----> %d\n", atoi("    ++1234"));
-//     printf("-----------------------------\n");
-//     printf("atoi result -----> %d\n", atoi("   123qz123"));
-//     printf("ft_atoi result -----> %d\n", atoi("   123ab123"));
-// }
